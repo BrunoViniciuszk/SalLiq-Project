@@ -201,6 +201,18 @@
                 style="@style/edit_text"
                 android:id="@+id/result"
                 />
+
+            <TextView
+                style="@style/text_view"
+                android:text="@string/result"
+                android:textAlignment="center"
+                android:backgroundTint="@color/white"
+                android:id="@+id/porcent"/>
+
+            <TextView
+                style="@style/edit_text"
+                android:id="@+id/porcentagem"
+                />
         </LinearLayout>
 
     </LinearLayout>

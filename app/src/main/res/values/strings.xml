@@ -15,6 +15,8 @@
     <string name="mester">Master</string>
     <string name="result">Seu Salário Líquido é :</string>
     <string name="resultado"> o sálario é %1$.2f</string>
+    <string name="porcentagem">O desconto é</string>
+    <string name="porcent">O desconto foi de %1$.2f</string>
 
 
 

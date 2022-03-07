@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bt_calcular;
     private RadioGroup group_ps,group_vt, group_va, group_vr;
     private RadioButton standard, basico, soper, mester, sim, nao, sim2, nao2, sim3, nao3;
-    private TextView resultado, result;
+    private TextView resultado, result, porcent, porcentagem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         bt_calcular = findViewById(R.id.bt_calcular);
         result = findViewById(R.id.result);
         resultado = findViewById(R.id.resultado);
+        porcent = findViewById(R.id.porcent);
+        porcentagem = findViewById(R.id.porcentagem);
 
         bt_calcular.setOnClickListener(v -> {
 
@@ -228,6 +230,9 @@ public class MainActivity extends AppCompatActivity {
 
 
             result.setText(getString(R.string.resultado,salLiq));
+            porcentagem.setText(getString(R.string.porcent,porc));
+
+
 
         });
 
