@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Calc Sálario Líquido</string>
+    <string name="bruto">Informe o sálario bruto</string>
+    <string name="dependentes">Informe o número de dependentes</string>
+    <string name="plano">Informe o tipo de plano de saúde</string>
+    <string name="vt">Tem Vale Transporte?</string>
+    <string name="va">Tem Vale Alimentação?</string>
+    <string name="vr">Tem Vale Refeição?</string>
+    <string name="calcular">Calcular</string>
+    <string name="sim">Sim</string>
+    <string name="não">Não</string>
+    <string name="standard">Standard</string>
+    <string name="basico">Básico</string>
+    <string name="soper">Super</string>
+    <string name="mester">Master</string>
+    <string name="result">Seu Salário Líquido é :</string>
+    <string name="resultado"> o sálario é %1$.2f</string>
+
+
+
+</resources>
