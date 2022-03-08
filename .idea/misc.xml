@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/CalcSlarioLquido/app/src/main/res/layout/activity_main.xml" value="0.1601123595505618" />
+        <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/CalcSlarioLquido/app/src/main/res/layout/activity_descontos.xml" value="0.10101010101010101" />
+        <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/CalcSlarioLquido/app/src/main/res/layout/activity_main.xml" value="0.20160320641282564" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/CalcSlarioLquido/app/src/main/res/layout/activity_result.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/CalcSlarioLquido/app/src/main/res/layout/content_result.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/CalcSlarioLquido/app/src/main/res/layout/fragment_first.xml" value="0.36666666666666664" />

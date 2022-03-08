@@ -13,4 +13,5 @@
     <color name="verde">#79E100</color>
     <color name="amarelo">#FFEB3B</color>
     <color name="laranja">#FF9800</color>
+    <color name="transparente">#77000000</color>
 </resources>

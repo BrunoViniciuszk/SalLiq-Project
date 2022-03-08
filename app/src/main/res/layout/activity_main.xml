@@ -7,6 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/planner"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -32,10 +33,11 @@
 
         <EditText
 
-            style="@style/edit_text"
             android:id="@+id/edit_bruto"
+            style="@style/edit_text"
 
-        />
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
 
@@ -46,10 +48,11 @@
 
         <EditText
 
-            style="@style/edit_text"
             android:id="@+id/edit_dependentes"
+            style="@style/edit_text"
 
-        />
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <TextView
 
@@ -61,36 +64,40 @@
       <RadioGroup
           style="@style/text_view"
           android:backgroundTint="@color/white"
+          android:background="@color/transparente"
           android:id="@+id/group_ps">
 
           <RadioButton
               style="@style/text_view"
               android:backgroundTint="@color/white"
+              android:background="@color/transparente"
               android:text="@string/standard"
               android:id="@+id/standard" />
 
           <RadioButton
               style="@style/text_view"
               android:backgroundTint="@color/white"
+              android:background="@color/transparente"
               android:text="@string/basico"
               android:id="@+id/basico" />
 
           <RadioButton
               style="@style/text_view"
               android:backgroundTint="@color/white"
+              android:background="@color/transparente"
               android:text="@string/soper"
               android:id="@+id/soper" />
 
           <RadioButton
               style="@style/text_view"
               android:backgroundTint="@color/white"
+              android:background="@color/transparente"
               android:text="@string/mester"
               android:id="@+id/mester" />
 
       </RadioGroup>
 
         <TextView
-
             style="@style/text_view"
             android:text="@string/vt"
 
@@ -99,17 +106,20 @@
         <RadioGroup
             android:id="@+id/group_vt"
             style="@style/text_view"
+            android:background="@color/transparente"
             android:backgroundTint="@color/white">
 
         <RadioButton
             style="@style/text_view"
             android:backgroundTint="@color/white"
+            android:background="@color/transparente"
             android:text="@string/sim"
             android:id="@+id/sim" />
 
         <RadioButton
              style="@style/text_view"
              android:backgroundTint="@color/white"
+            android:background="@color/transparente"
              android:text="@string/não"
              android:id="@+id/nao" />
 
@@ -124,17 +134,20 @@
         <RadioGroup
             android:id="@+id/group_va"
             style="@style/text_view"
+            android:background="@color/transparente"
             android:backgroundTint="@color/white">
 
             <RadioButton
                 style="@style/text_view"
                 android:backgroundTint="@color/white"
+                android:background="@color/transparente"
                 android:text="@string/sim"
                 android:id="@+id/sim2" />
 
             <RadioButton
                 style="@style/text_view"
                 android:backgroundTint="@color/white"
+                android:background="@color/transparente"
                 android:text="@string/não"
                 android:id="@+id/nao2" />
 
@@ -148,17 +161,20 @@
         <RadioGroup
             android:id="@+id/group_vr"
             style="@style/text_view"
+            android:background="@color/transparente"
             android:backgroundTint="@color/white">
 
             <RadioButton
                 style="@style/text_view"
                 android:backgroundTint="@color/white"
+                android:background="@color/transparente"
                 android:text="@string/sim"
                 android:id="@+id/sim3" />
 
             <RadioButton
                 style="@style/text_view"
                 android:backgroundTint="@color/white"
+                android:background="@color/transparente"
                 android:text="@string/não"
                 android:id="@+id/nao3" />
 
@@ -181,39 +197,19 @@
             android:text="@string/calcular"
             />
 
+        <Button
+            android:layout_width="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/bt_limpar"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:text="@string/limpar"
+            />
+
 
     </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
-
-            <TextView
-                style="@style/text_view"
-                android:text="@string/result"
-                android:textAlignment="center"
-                android:backgroundTint="@color/white"
-                android:id="@+id/resultado"/>
-
-            <TextView
-                style="@style/edit_text"
-                android:id="@+id/result"
-                />
-
-            <TextView
-                style="@style/text_view"
-                android:text="@string/result"
-                android:textAlignment="center"
-                android:backgroundTint="@color/white"
-                android:id="@+id/porcent"/>
-
-            <TextView
-                style="@style/edit_text"
-                android:id="@+id/porcentagem"
-                />
-        </LinearLayout>
 
     </LinearLayout>
 

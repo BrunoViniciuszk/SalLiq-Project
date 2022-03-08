@@ -17,7 +17,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private EditText edit_bruto, edit_dependentes;
-    private Button bt_calcular;
+    private Button bt_calcular, bt_limpar;
     private RadioGroup group_ps,group_vt, group_va, group_vr;
     private RadioButton standard, basico, soper, mester, sim, nao, sim2, nao2, sim3, nao3;
     private TextView resultado, result, porcent, porcentagem;
@@ -44,22 +44,26 @@ public class MainActivity extends AppCompatActivity {
         nao2 = findViewById(R.id.nao2);
         nao3 = findViewById(R.id.nao3);
         bt_calcular = findViewById(R.id.bt_calcular);
-        result = findViewById(R.id.result);
-        resultado = findViewById(R.id.resultado);
-        porcent = findViewById(R.id.porcent);
-        porcentagem = findViewById(R.id.porcentagem);
+        bt_limpar = findViewById(R.id.bt_limpar);
 
         bt_calcular.setOnClickListener(v -> {
 
             // Declaração de variáveis
             double salBr,salLiq, inss, vr, vt, va, irrf, ps = 0 , base_de_calc, porc;
-            salBr = Double.parseDouble(edit_bruto.getText().toString());
             int dependente = 0;
-            dependente = Integer.parseInt(edit_dependentes.getText().toString());
+
 
 
 
             //Estrutura condicional para os planos de saúde
+
+            if(edit_bruto.getText().toString().isEmpty()) {
+                edit_bruto.setError("Informe seu salário");
+                edit_bruto.requestFocus();
+            }else {
+                salBr = Double.parseDouble(edit_bruto.getText().toString());
+                dependente = Integer.parseInt(edit_dependentes.getText().toString());
+
 
             group_ps.getCheckedRadioButtonId();
 
@@ -228,11 +232,26 @@ public class MainActivity extends AppCompatActivity {
             porc = salLiq * 100 / salBr;
             porc = 100 - porc;
 
+            // abrir a ActivityResultado
+            Intent intent = new Intent(this, Descontos.class);
+            intent.putExtra("salLiq", salLiq);
+            intent.putExtra("porc",porc);
+            startActivity(intent);
+            //finish();
 
-            result.setText(getString(R.string.resultado,salLiq));
-            porcentagem.setText(getString(R.string.porcent,porc));
+            }
 
 
+        });
+
+        bt_limpar.setOnClickListener(v ->{
+            edit_bruto.setText("");
+            edit_dependentes.setText("");
+            group_ps.clearCheck();
+            group_vr.clearCheck();
+            group_va.clearCheck();
+            group_vt.clearCheck();
+            edit_bruto.requestFocus();
 
         });
 
